@@ -8,5 +8,7 @@ Before getting into the steps of tutorial, you need to setup some core software 
 
 Please install these software if you don't have in your computer.
 
-* [Visual Studio Community 2019](https://visualstudio.microsoft.com/vs/community/)
+* [Visual Studio Community 2019](https://visualstudio.microsoft.com/vs/community/) - Don't forget to install .NET core components during setup.
+
+* [Docker Desktop for Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
