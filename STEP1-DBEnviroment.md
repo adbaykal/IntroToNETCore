@@ -1,4 +1,4 @@
-## Creating DB Enviroment
+# Creating DB Enviroment
 
 First we are going to install MariaDB 
 
@@ -16,7 +16,7 @@ Now lets create a db from mysql CLI. First you need to login to CLI of the conta
 mysql -p
 ```
 
-You can enter the password you previosly enter to the `docker run` commend
+You can enter the password you previosly enter to the `docker run` command
 
 Now let's create our database;
 ```sql
@@ -35,3 +35,15 @@ docker run --name myadmin -d --link mariaforgt:db -p 8080:80 phpmyadmin
 
 After running these commands successfully you can navigate to PHPMyAdmin via `http://localhost:8080`
 
+
+## Creating Workshop Tables
+
+After all the setup is done, we can create tables which we will be using on our API.
+
+We will be creating below tables:
+
+- APIUser - This table will contain API user data to manage access to API. For simplicity every user in this table will have full access to all of the methods. 
+
+- Customer - his table will contain customer data whick we will be serving mainly from the API.
+
+You can access create scripts from file called [TableCreate.sql](TableCreate.sql)

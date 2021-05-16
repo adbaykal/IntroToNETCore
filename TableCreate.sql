@@ -1,5 +1,5 @@
 --ApiUsers Table
-CREATE TABLE `IntToNetCore`.`ApiUsers` 
+CREATE TABLE `IntToNetCore`.`ApiUser` 
 (   `Username` VARCHAR(50) NOT NULL , 
     `Password` VARCHAR(50) NOT NULL , 
     `CreatedTime` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
