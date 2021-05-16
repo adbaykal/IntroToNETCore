@@ -1,0 +1,2 @@
+--ApiUsers Table
+CREATE TABLE `IntToNetCore`.`ApiUsers` ( `Username` VARCHAR(50) NOT NULL , `Password` VARCHAR(50) NOT NULL , `CreatedTime` TIMESTAMP NOT NULL , `ModifiedTime` TIMESTAMP NOT NULL , PRIMARY KEY (`Username`)) ENGINE = InnoDB; 
