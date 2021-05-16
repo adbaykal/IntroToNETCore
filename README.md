@@ -30,3 +30,5 @@ We will be creating a microservice API for Customer Operations of Gringotts Wiza
 ## Workshop Steps
 
 ### [STEP 1 - Creating DB Environment](STEP1-DBEnvironment.md)
+
+### [STEP 2 - Creating ASP.NET Core project](STEP2-CreatingASPNETCoreProject.md)
