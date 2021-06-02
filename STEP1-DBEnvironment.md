@@ -47,3 +47,5 @@ We will be creating below tables:
 - Customer - his table will contain customer data whick we will be serving mainly from the API.
 
 You can access create scripts from file called [TableCreate.sql](TableCreate.sql)
+
+### Continue on [STEP 2 - Creating ASP.NET Core project](STEP2-CreatingASPNETCoreProject.md)
