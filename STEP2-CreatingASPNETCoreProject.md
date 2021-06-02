@@ -31,7 +31,7 @@ We will follow these steps in workshop:
     // specifying the Swagger JSON endpoint.
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Narkoz API V1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Gringotts API V1");
     });
     ```
 
