@@ -21,3 +21,9 @@ CREATE TABLE `IntToNetCore`.`Customer`
     `ModifiedUser` VARCHAR(50) NULL , 
     PRIMARY KEY (`CustomerNum`)
 ) ENGINE = InnoDB;
+
+INSERT INTO `Customer`(`CustomerNum`, `Name`, `Surname`, `Email`, `EmailVerified`, `CreatedTime`, `ModifiedTime`, `CreatedUser`, `ModifiedUser`) 
+VALUES ('1','Harry','Potter','harry@hogwards.edu','1',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'init','init');
+
+INSERT INTO `Customer`(`CustomerNum`, `Name`, `Surname`, `Email`, `EmailVerified`, `CreatedTime`, `ModifiedTime`, `CreatedUser`, `ModifiedUser`) 
+VALUES ('2','Bellatrix','Lestrange','bella@deatheaters.com','1',CURRENT_TIMESTAMP,CURRENT_TIMESTAMP,'init','init');
