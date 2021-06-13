@@ -125,5 +125,6 @@ We will be adding DB Connection to our application via Entity Framework.
     }
     ...
     ```
+### Next Step is [STEP 3 - Logging](STEP3-Logging.md)
 
-### Return to [STEP 1 - Creating DB Environment](STEP1-DBEnvironment.md)
+### OR return to [STEP 1 - Creating DB Environment](STEP1-DBEnvironment.md)
