@@ -1,3 +1,4 @@
+using CustomerApi.Middleware;
 using CustomerApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -57,6 +58,9 @@ namespace CustomerApi
             });
 
             app.UseRouting();
+
+            //Add logging request response
+            app.UseRequestResponseLogging();
 
             app.UseAuthorization();
 
