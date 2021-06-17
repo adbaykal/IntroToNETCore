@@ -104,3 +104,5 @@ by using this extension we can add the middleware by writing `app.UseRequestResp
 > You can find [complete RequestResponseLoggingMiddleware class here.](STEP3/GringottsBank/CustomerApi/Middleware/RequestResponseLoggingMiddleware.cs)
 
 ### Return to [STEP 2 - Creating ASP.NET Core project](STEP2-CreatingASPNETCoreProject.md)
+
+### Next Step is [STEP 4 - Authentication & Authorization](STEP3-Logging.md)

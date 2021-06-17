@@ -1,5 +1,7 @@
 using CustomerApi.Middleware;
 using CustomerApi.Models;
+using CustomerApi.Services;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,11 +33,44 @@ namespace CustomerApi
         {
             services.AddControllers();
 
-            services.AddSwaggerGen();
+            services.AddSwaggerGen(c =>
+            {
+
+                c.AddSecurityDefinition("http", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.Http,
+                    Description = "Basic",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Scheme = "basic"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type=ReferenceType.SecurityScheme,
+                                Id="http"
+                            },
+                            Scheme = "basic",
+                            Name = "basic",
+                            In = ParameterLocation.Header
+                        },
+                        new List<string>()
+                    }
+                });
+            });
 
             services.AddDbContext<IntToNetCoreContext>(
                 options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection"))
                 );
+
+            services.AddAuthentication("BasicAuthentication")
+                .AddScheme<AuthenticationSchemeOptions, BasicAuthenticationHandler>("BasicAuthentication", null);
+
+            services.AddScoped<IApiUserService, ApiUserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,6 +98,7 @@ namespace CustomerApi
             //Add logging request response
             app.UseRequestResponseLogging();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
