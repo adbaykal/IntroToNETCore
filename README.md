@@ -24,7 +24,7 @@ We will be creating a microservice API for Customer Operations of Gringotts Wiza
 * As a registered API user i can create customer by posting data to api with my username and password
 * As a registered API user i can query customers from api with my username and password
 * As the Head Goblin of the bank i need to see all query logs
-* As a customer i need to get an email to verify my email adress
+* As a Bank IT Admin i can run the app on Docker so that i can deploy it to any Kubernetes environment
 
 
 ## Workshop Steps
@@ -36,3 +36,5 @@ We will be creating a microservice API for Customer Operations of Gringotts Wiza
 ### [STEP 3 - Logging](STEP3-Logging.md)
 
 ### [STEP 4 - Authentication & Authorization](STEP4-Auth.md)
+
+### [STEP 5 - Deploying to Docker](STEP5-DeployingToDocker.md)
