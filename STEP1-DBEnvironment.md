@@ -7,7 +7,7 @@ docker pull mariadb
 ```
 
 ```bash
-docker run -p 127.0.0.1:3306:3306  --name mariaforgt -e MARIADB_ROOT_PASSWORD=mariaforgt -d mariadb:latest
+docker run -p 127.0.0.1:3306:3306  --name mariafornetcore -e MARIADB_ROOT_PASSWORD=mariafornetcore -d mariadb:latest
 ```
 
 Now lets create a db from mysql CLI. First you need to login to CLI of the container and enter the following command:
@@ -30,7 +30,7 @@ To install phpmysql docker image;
 docker pull phpmyadmin/phpmyadmin
 ```
 ```bash
-docker run --name myadmin -d --link mariaforgt:db -p 8080:80 phpmyadmin
+docker run --name myadmin -d --link mariafornetcore:db -p 8080:80 phpmyadmin
 ```
 
 After running these commands successfully you can navigate to PHPMyAdmin via `http://localhost:8080`

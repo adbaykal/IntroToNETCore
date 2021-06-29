@@ -65,7 +65,7 @@ We will be adding DB Connection to our application via Entity Framework.
 4. After installing all the packages, we can create our model classes from existing tables. This is done by `Scaffold-DbContext` command of the `Microsoft.EntityFrameworkCore.Tools` library. 
 
     ```bash
-    Scaffold-DbContext "server=localhost;port=3306;database=IntToNetCore;user=root;password=mariaforgt" Pomelo.EntityFrameworkCore.MySql -OutputDir Models
+    Scaffold-DbContext "server=localhost;port=3306;database=IntToNetCore;user=root;password=mariafornetcore" Pomelo.EntityFrameworkCore.MySql -OutputDir Models
     ```
     > Be carefull to enter connection string of the db correctly. Also you can specify the output directory of model classes by giving the path to `-OutputDir` parameter of the command. In our example model classes will be generated to `Models` directory.
 
@@ -76,7 +76,7 @@ We will be adding DB Connection to our application via Entity Framework.
     ```json
     ...
     "ConnectionStrings": {
-        "DefaultConnection": "server=localhost;port=3306;database=IntToNetCore;user=root;password=mariaforgt"
+        "DefaultConnection": "server=localhost;port=3306;database=IntToNetCore;user=root;password=mariafornetcore"
     },
     ...
     ```
@@ -86,7 +86,7 @@ We will be adding DB Connection to our application via Entity Framework.
     if (!optionsBuilder.IsConfigured)
                 {
     #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                    optionsBuilder.UseMySql("server=localhost;port=3306;database=IntToNetCore;user=root;password=mariaforgt", x => x.ServerVersion("10.5.10-mariadb"));
+                    optionsBuilder.UseMySql("server=localhost;port=3306;database=IntToNetCore;user=root;password=mariafornetcore", x => x.ServerVersion("10.5.10-mariadb"));
                 }
     ```
 
